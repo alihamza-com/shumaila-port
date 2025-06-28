@@ -1,4 +1,4 @@
-"use client";
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -7,21 +7,92 @@ import { Progress } from "@/components/ui/progress"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Download, Award, GraduationCap, Briefcase } from "lucide-react"
+import type { Metadata } from "next";
+import { DownloadResumeButton } from "@/components/DownloadResumeButton"
+
+export const metadata: Metadata = {
+  title: "About Suhumeela - Expert Content Writer & SEO Copywriter",
+  description:
+    "Learn about Suhumeela, a skilled content writer specializing in SEO content, blog writing, and copywriting for brands and businesses.",
+  keywords: [
+  "Suhumeela",
+  "content writer",
+  "best content writing services",
+  "content writing services in Pakistan",
+  "article writing services in Pakistan",
+  "best SEO content writer in Pakistan",
+  "freelance content writer",
+  "SEO copywriter",
+  "blog writer",
+  "professional content writing services",
+  "content writer Karachi",
+  "content writing in Dubai",
+  "best copywriter in USA",
+  "freelance copywriter Australia",
+  "real estate content writer",
+  "marketing content writer",
+  "web content writer",
+  "best content writing websites",
+  "content writer rates per word",
+  "content writer Karachi contact number",
+],
+  authors: [{ name: "Suhumeela" }],
+  openGraph: {
+    title: "About Suhumeela - Expert Content Writer",
+    description:
+      "Discover Suhumeela's journey as a content writer, specializing in SEO, blog writing, and persuasive copy for businesses.",
+    type: "website",
+    url: "https://storycup.vercel.app/about", // Replace with your actual About page URL
+    images: [
+      {
+        url: "/aboutme.webp", // Replace with a relevant image for the About page
+        width: 1200,
+        height: 630,
+        alt: "Suhumeela - Content Writer Profile",
+      },
+    ],
+    siteName: "Suhumeela Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Suhumeela - Expert Content Writer",
+    description:
+      "Learn about Suhumeela's expertise in SEO content, blog writing, and copywriting for impactful business content.",
+    images: ["/aboutme.webp"], // Replace with your actual image
+  },
+  alternates: {
+    canonical: "https://storycup.vercel.app/about", // Replace with your actual About page URL
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Suhumeela",
+      jobTitle: "Content Writer & SEO Copywriter",
+      url: "https://storycup.vercel.app/about", // Replace with your actual About page URL
+      sameAs: [
+        "https://www.linkedin.com/in/suhumeela", // Replace with your actual LinkedIn
+        "https://twitter.com/suhumeela", // Replace with your actual Twitter
+      ],
+      description:
+        "Suhumeela is a professional content writer with expertise in SEO content, blog writing, and copywriting, delivering engaging content for businesses and brands.",
+    }),
+  },
+};
 
 export default function AboutPage() {
-  const handleDownloadResume = async () => {
-  const response = await fetch('/sushmilaresume.pdf');
-  const blob = await response.blob();
-
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.setAttribute('download', 'sushmilaresume.pdf'); // force download with name
-  link.style.display = 'none';
-  document.body.appendChild(link);
-  link.click(); // 👈 triggers instant download
-  link.remove();
-  URL.revokeObjectURL(link.href); // clean up
-};
+ 
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -42,12 +113,7 @@ export default function AboutPage() {
             I'm a passionate content writer with 5+ years of experience crafting words that connect, convert, and inform.
             I specialize in web content, blogs, and brand storytelling that leaves a lasting impact.
           </p>
-          <Button className="mt-6" size="lg"   onClick={handleDownloadResume}>
-           
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-          
-          </Button>
+          <DownloadResumeButton/>
         </section>
 
         {/* Professional Journey */}

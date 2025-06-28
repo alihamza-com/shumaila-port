@@ -6,7 +6,91 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ExternalLink, Youtube } from "lucide-react"
+import { ExternalLink} from "lucide-react"
+import { Metadata } from "next"
+export const metadata: Metadata = {
+  title: "Suhumeela's Portfolio - SEO Content & Copywriting",
+  description:
+    "Explore Suhumeela's content writing portfolio, featuring SEO content, blog posts, and copywriting projects for businesses.",
+  keywords: [
+  "Suhumeela portfolio",
+  "content writing portfolio",
+  "best content writing services",
+  "content writing services in Pakistan",
+  "article writing services in Pakistan",
+  "best SEO content writer in Pakistan",
+  "freelance content writer",
+  "SEO copywriting",
+  "blog writing portfolio",
+  "professional content writing services",
+  "content writer Karachi",
+  "content writing in Dubai",
+  "best copywriter in USA",
+  "freelance copywriter Australia",
+  "real estate content writer",
+  "marketing content writer",
+  "web content writer",
+  "best content writing websites",
+  "content writer rates per word",
+  "content writer Karachi contact number",
+],
+  authors: [{ name: "Suhumeela" }],
+  openGraph: {
+    title: "Suhumeela's Portfolio - Content Writing & SEO",
+    description:
+      "View Suhumeela's professional portfolio of SEO content, blog posts, and persuasive copywriting for brands and businesses.",
+    type: "website",
+    url: "https://storycup.vercel.app/portfolio", // Replace with your actual Portfolio page URL
+    images: [
+      {
+        url: "/worldwideartical.jpg", // Replace with a relevant image for the Portfolio page
+        width: 1200,
+        height: 630,
+        alt: "Suhumeela Content Writing Portfolio",
+      },
+    ],
+    siteName: "Suhumeela Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Suhumeela's Portfolio - Content Writing & SEO",
+    description:
+      "Discover Suhumeela's portfolio showcasing SEO content, blog writing, and copywriting projects.",
+    images: ["/worldwideartical.jpg"], // Replace with your actual image
+  },
+  alternates: {
+    canonical: "https://storycup.vercel.app/portfolio", // Replace with your actual Portfolio page URL
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      name: "Suhumeela's Content Writing Portfolio",
+      author: {
+        "@type": "Person",
+        name: "Suhumeela",
+      },
+      url: "https://storycup.vercel.app/portfolio", // Replace with your actual Portfolio page URL
+      sameAs: [
+        "https://www.linkedin.com/in/suhumeela", // Replace with your actual LinkedIn
+        "https://twitter.com/suhumeela", // Replace with your actual Twitter
+      ],
+      description:
+        "Suhumeela's portfolio showcases professional content writing, including SEO content, blog posts, and copywriting for businesses and brands.",
+    }),
+  },
+};
 
 const projects = [
   {
@@ -159,12 +243,12 @@ export default function PortfolioPage() {
                               Live Demo
                             </Link>
                           </Button>
-                          <Button size="sm" variant="outline" asChild>
+                          {/* <Button size="sm" variant="outline" asChild>
                             <Link href={project.githubUrl} target="_blank">
                               <Youtube className="mr-2 h-3 w-3 text-red-600" />
                               Video
                             </Link>
-                          </Button>
+                          </Button> */}
                         </div>
                       </CardContent>
                     </Card>

@@ -7,11 +7,91 @@ import { Input } from "@/components/ui/input"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Calendar, Clock, Search, ArrowRight } from "lucide-react"
+import {Metadata} from "next"
 
-
-
-
-
+export const metadata: Metadata = {
+  title: "Suhumeela's Blog - Best Content Writing Tips & SEO Insights",
+  description:
+    "Explore Suhumeela's blog for expert tips on content writing, SEO content, and blog writing from Pakistan's top writer.",
+  keywords: [
+    "Suhumeela blog",
+    "best content writing services",
+    "content writing services in Pakistan",
+    "article writing services in Pakistan",
+    "content writing agency",
+    "best SEO content writer in Pakistan",
+    "freelance content writer",
+    "SEO copywriting",
+    "blog writing services",
+    "professional content writing services",
+    "content writer Karachi",
+    "content writing in Dubai",
+    "best copywriter in USA",
+    "freelance copywriter Australia",
+    "real estate content writer",
+    "marketing content writer",
+    "web content writer",
+    "best content writing websites",
+    "content writer rates per word",
+    "content writer Karachi contact number",
+  ],
+  authors: [{ name: "Suhumeela" }],
+  openGraph: {
+    title: "Suhumeela's Blog - Content Writing Tips & SEO Insights",
+    description: "Discover expert content writing tips, SEO strategies, and blog writing insights from Suhumeela, a top writer in Pakistan.",
+    type: "website",
+    url: "https://storycup.vercel.app/blog", // Replace with your actual Blog page URL
+    images: [
+      {
+        url: "/blog-og-image.jpg", // Replace with a relevant image for the Blog page
+        width: 1200, // Fixed: Changed from 00 to 1200
+        height: 630,
+        alt: "Suhumeela Blog - Content Writing Tips",
+      },
+    ],
+    siteName: "Suhumeela Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Suhumeela's Blog - Content Writing & SEO Tips",
+    description:
+      "Read Suhumeela's blog for top content writing, SEO, and blog writing tips from Pakistan to USA, Dubai, and Australia.",
+    images: ["/bBiography.webp"], // Replace with your actual image
+  },
+  alternates: {
+    canonical: "https://storycup.vercel.app/blog", // Replace with your actual Blog page URL
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "application/ld+json": JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Suhumeela's Content Writing Blog",
+  author: {
+    "@type": "Person",
+    name: "Suhumeela",
+  },
+  url: "https://storycup.vercel.app/blog", // Replace with your actual Blog page URL
+      sameAs: [
+        "https://www.linkedin.com/in/suhumeela", // Replace with your actual LinkedIn
+        "https://twitter.com/suhumeela", // Replace with your actual Twitter
+        "https://wa.me/+923181463435", // Replace with your actual WhatsApp number
+      ],
+      description:
+        "Suhumeela's blog offers expert insights on content writing, SEO content, blog writing, and copywriting, serving clients in Pakistan, Karachi, USA, Dubai, Australia, and UK.",
+    }),
+  },
+};
 
 
 const blogPosts = [
@@ -72,6 +152,8 @@ const blogPosts = [
     featured: false,
   },
 ]
+
+
 
 const categories = ["All", "Blog Writing", "Website Copy", "Press Release", "SEO Content", "Thought Leadership", "Strategy"]
 

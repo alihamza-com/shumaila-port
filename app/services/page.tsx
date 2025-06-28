@@ -5,6 +5,93 @@ import { Badge } from "@/components/ui/badge"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { CheckCircle, FileText, PenLine, Search, Newspaper, MessageCircle } from "lucide-react"
+import { Metadata } from "next"
+export const metadata: Metadata = {
+  title: "Suhumeela's Services - Best Content Writing & SEO Copywriting",
+  description:
+    "Hire Suhumeela for top content writing services in Pakistan, including SEO content, blog writing, and copywriting to elevate your brand.",
+  keywords: [
+    "best content writing services",
+    "content writing services in Pakistan",
+    "article writing services in Pakistan",
+    "content writing agency",
+    "best SEO content writer in Pakistan",
+    "freelance content writer",
+    "SEO copywriting",
+    "blog writing services",
+    "professional content writing services",
+    "content writer Karachi",
+  ],
+  authors: [{ name: "Suhumeela" }],
+  openGraph: {
+    title: "Suhumeela's Services - Best Content Writing & SEO in Pakistan",
+    description:
+      "Suhumeela offers expert content writing services in Pakistan, including SEO content, blog writing, and copywriting for businesses worldwide.",
+    type: "website",
+    url: "https://storycup.vercel.app/services", // Replace with your actual Services page URL
+    images: [
+      {
+        url: "/services-og-image.jpg", // Replace with a relevant image for the Services page
+        width: 1200,
+        height: 630,
+        alt: "Suhumeela Best Content Writing Services",
+      },
+    ],
+    siteName: "Suhumeela Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Suhumeela's Services - Best Content Writing & SEO",
+    description:
+      "Hire Suhumeela for professional content writing, SEO content, and blog writing services in Pakistan and beyond.",
+    images: ["/services-og-image.jpg"], // Replace with your actual image
+  },
+  alternates: {
+    canonical: "https://storycup.vercel.app/services", // Replace with your actual Services page URL
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: "Content Writing",
+      provider: {
+        "@type": "Person",
+        name: "Suhumeela",
+      },
+      url: "https://storycup.vercel.app/services", // Replace with your actual Services page URL
+      sameAs: [
+        "https://www.linkedin.com/in/suhumeela", // Replace with your actual LinkedIn
+        "https://twitter.com/suhumeela", // Replace with your actual Twitter
+      ],
+      description:
+        "Suhumeela provides top content writing services in Pakistan, specializing in SEO content, blog writing, article writing, and copywriting for businesses globally.",
+      areaServed: [
+        "Pakistan",
+        "Karachi",
+        "USA",
+        "Dubai",
+        "Australia",
+        "UK",
+      ],
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "USD",
+        description: "Professional content writing services including SEO content, blog writing, and copywriting",
+      },
+    }),
+  },
+};
 
 const services = [
   {

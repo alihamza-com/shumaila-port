@@ -14,7 +14,8 @@ export function Footer() {
               </div>
               <span className="font-bold text-xl">Suhumaila</span>
             </div>
-            <p className="text-muted-foreground">Full-Stack Developer crafting exceptional digital experiences.</p>
+            <p className="text-muted-foreground">Crafted with clarity by your dedicated Content Writer</p>
+
             <div className="flex space-x-2">
               <Button size="icon" variant="ghost" asChild>
                 <Link href="https://github.com" target="_blank">
@@ -69,16 +70,20 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-muted-foreground">Web Development</span>
+                <span className="text-muted-foreground">Website Copywriting
+</span>
               </li>
               <li>
-                <span className="text-muted-foreground">UI/UX Design</span>
+                <span className="text-muted-foreground">SEO Content Strategy
+</span>
               </li>
               <li>
-                <span className="text-muted-foreground">Mobile Apps</span>
+                <span className="text-muted-foreground">Press Releases & PR Writing
+</span>
               </li>
               <li>
-                <span className="text-muted-foreground">Consulting</span>
+                <span className="text-muted-foreground">SEO Content Strategy
+</span>
               </li>
             </ul>
           </div>
@@ -87,7 +92,7 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-muted-foreground">shustorycup@example.com</span>
+                <span className="text-muted-foreground">shustorycup@gmail.com</span>
               </li>
               <li>
                 <span className="text-muted-foreground">+92 3181463425</span>
@@ -100,7 +105,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} @2025 Suhumaila. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()}  Suhumaila. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -12,7 +12,7 @@ export function Footer() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">A</span>
               </div>
-              <span className="font-bold text-xl">Sushmaila</span>
+              <span className="font-bold text-xl">Sushmeela</span>
             </div>
             <p className="text-muted-foreground">Crafted with clarity by your dedicated Content Writer</p>
 

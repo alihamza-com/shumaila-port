@@ -127,7 +127,7 @@ const services = [
 const packages = [
   {
     name: "Starter",
-    price: "$100",
+    price: "$50",
     description: "Perfect for startups and personal brands",
     features: [
       "3 blog posts (up to 1,000 words)",
@@ -142,7 +142,7 @@ const packages = [
   },
   {
     name: "Professional",
-    price: "$200",
+    price: "$100",
     description: "Ideal for growing businesses and agencies",
     features: [
       "6 blog posts (up to 1,200 words)",

@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     "content strategy",
     "freelance writer",
     "Sushmeela portfolio",
+    "storycup"
   ],
   authors: [{ name: "Sushmeela" }],
   openGraph: {

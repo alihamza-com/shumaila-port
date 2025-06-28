@@ -105,7 +105,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()}  Sushmaila. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()}  Sushmeela. All rights reserved.</p>
         </div>
       </div>
     </footer>

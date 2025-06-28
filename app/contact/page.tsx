@@ -280,7 +280,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Twitter className="h-4 w-4" />
+                      <Mail className="h-4 w-4" />
                     </a>
                   </Button>
                 </div>

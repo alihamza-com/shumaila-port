@@ -1,21 +1,21 @@
-"use client"
-import type React from "react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { metadata } from "./metadata"
+"use client";
+import type React from "react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { metadata } from "./metadata";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+} from "@/components/ui/select";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import {
   Mail,
   Phone,
@@ -24,8 +24,8 @@ import {
   Github,
   Linkedin,
   Twitter,
-} from "lucide-react"
-import emailjs from "@emailjs/browser"
+} from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -34,20 +34,20 @@ export default function ContactPage() {
     service: "",
     budget: "",
     message: "",
-  })
+  });
 
-  const [isSending, setIsSending] = useState(false)
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
   const handleSubmitEmail = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!formData.service || !formData.budget) {
-      alert("Please select both a content type and a budget range.")
-      return
+      alert("Please select both a content type and a budget range.");
+      return;
     }
 
     const templateParams = {
@@ -56,18 +56,17 @@ export default function ContactPage() {
       service: formData.service,
       budget: formData.budget,
       message: formData.message,
-    }
+    };
 
-    setIsSending(true)
+    setIsSending(true);
     try {
       const result = await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        "service_f9oqsdw", // e.g., "service_xyz123"
+        "template_0xfxbh7", // e.g., "template_abc456"
         templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      )
-      console.log("Email sent:", result.text)
-      
+        "o_X_nlOfewJlNhZxf" // e.g., "your_public_key_789"
+      );
+      console.log("Email sent:", result.text);
 
       setFormData({
         name: "",
@@ -75,14 +74,14 @@ export default function ContactPage() {
         service: "",
         budget: "",
         message: "",
-      })
+      });
     } catch (error) {
-      console.error("Email sending failed:", error)
-      alert("Failed to send message. Please try again later.")
+      console.error("Email sending failed:", error);
+      alert("Failed to send message. Please try again later.");
     } finally {
-      setIsSending(false)
+      setIsSending(false);
     }
-  }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -90,9 +89,12 @@ export default function ContactPage() {
 
       <div className="container mx-auto px-4 py-12">
         <section className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">Let's Collaborate</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold mb-4">
+            Let's Collaborate
+          </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Whether you need engaging articles, strategic SEO content, or compelling web copy—I'm here to help.
+            Whether you need engaging articles, strategic SEO content, or
+            compelling web copy—I'm here to help.
           </p>
         </section>
 
@@ -100,7 +102,9 @@ export default function ContactPage() {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl">Share Your Project Details</CardTitle>
+                <CardTitle className="text-2xl">
+                  Share Your Project Details
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmitEmail} className="space-y-6">
@@ -133,17 +137,29 @@ export default function ContactPage() {
                       <Label htmlFor="service">Type of Content</Label>
                       <Select
                         value={formData.service}
-                        onValueChange={(value) => handleChange("service", value)}
+                        onValueChange={(value) =>
+                          handleChange("service", value)
+                        }
                       >
                         <SelectTrigger>
                           <SelectValue placeholder="Select a content type" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="blog-article">Blog/Article Writing</SelectItem>
-                          <SelectItem value="web-copy">Website Copywriting</SelectItem>
-                          <SelectItem value="press-release">Press Releases</SelectItem>
-                          <SelectItem value="seo-strategy">SEO Content Strategy</SelectItem>
-                          <SelectItem value="editing-proofreading">Editing & Proofreading</SelectItem>
+                          <SelectItem value="blog-article">
+                            Blog/Article Writing
+                          </SelectItem>
+                          <SelectItem value="web-copy">
+                            Website Copywriting
+                          </SelectItem>
+                          <SelectItem value="press-release">
+                            Press Releases
+                          </SelectItem>
+                          <SelectItem value="seo-strategy">
+                            SEO Content Strategy
+                          </SelectItem>
+                          <SelectItem value="editing-proofreading">
+                            Editing & Proofreading
+                          </SelectItem>
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
@@ -180,7 +196,12 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full" disabled={isSending}>
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full"
+                    disabled={isSending}
+                  >
                     <Send className="mr-2 h-4 w-4" />
                     {isSending ? "Sending..." : "Submit Inquiry"}
                   </Button>
@@ -201,7 +222,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">shustorycup@gmail.com</p>
+                    <p className="text-muted-foreground">
+                      shustorycup@gmail.com
+                    </p>
                   </div>
                 </div>
 
@@ -234,17 +257,29 @@ export default function ContactPage() {
               <CardContent>
                 <div className="flex gap-4">
                   <Button size="icon" variant="outline" asChild>
-                    <a href="https://github.com/ali-dev" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://github.com/ali-dev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Github className="h-4 w-4" />
                     </a>
                   </Button>
                   <Button size="icon" variant="outline" asChild>
-                    <a href="https://linkedin.com/in/ali-dev" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://linkedin.com/in/ali-dev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Linkedin className="h-4 w-4" />
                     </a>
                   </Button>
                   <Button size="icon" variant="outline" asChild>
-                    <a href="https://twitter.com/ali_dev" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://twitter.com/ali_dev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Twitter className="h-4 w-4" />
                     </a>
                   </Button>
@@ -258,7 +293,8 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  I typically respond within 24 hours. If your content request is urgent, please reach out via email.
+                  I typically respond within 24 hours. If your content request
+                  is urgent, please reach out via email.
                 </p>
               </CardContent>
             </Card>
@@ -266,33 +302,34 @@ export default function ContactPage() {
         </div>
 
         <section className="mt-16">
-  <Card>
-    <CardHeader>
-      <CardTitle>Our Location</CardTitle>
-    </CardHeader>
-    <CardContent className="p-0">
-      <div className="overflow-hidden rounded-b-lg">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d435410.59869490843!2d74.3243776!3d31.506432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1751054772826!5m2!1sen!2s"
-          width="100%"
-          height="400"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="w-full h-96"
-        ></iframe>
-      </div>
-      <div className="p-4 text-center">
-        <p className="text-muted-foreground">Serving clients globally from Pakistan</p>
-      </div>
-    </CardContent>
-  </Card>
-</section>
-
+          <Card>
+            <CardHeader>
+              <CardTitle>Our Location</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <div className="overflow-hidden rounded-b-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d435410.59869490843!2d74.3243776!3d31.506432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1751054772826!5m2!1sen!2s"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-96"
+                ></iframe>
+              </div>
+              <div className="p-4 text-center">
+                <p className="text-muted-foreground">
+                  Serving clients globally from Pakistan
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
       </div>
 
       <Footer />
     </div>
-  )
+  );
 }

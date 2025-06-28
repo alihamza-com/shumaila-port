@@ -4,13 +4,16 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-
+import ReviewSidebar from "@/components/reViews"
+import { ReviewSidebarProvider } from "@/components/ReviewSidebarContext"
+import ReviewToggleButton from "@/components/ReviewToggleButton"
+import FloatingWhatsApp from "@/components/floating-whatsapp"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Suhumeela - Expert Content Writer & SEO Copywriter",
+  title: "Sushmeela - Expert Content Writer & SEO Copywriter",
   description:
-    "Discover Suhumeela's professional content writing portfolio. Expert in SEO content, blog writing, and copywriting to boost engagement and rankings.",
+    "Discover Sushmeela's professional content writing portfolio. Expert in SEO content, blog writing, and copywriting to boost engagement and rankings.",
   keywords: [
     "content writer",
     "SEO content",
@@ -18,13 +21,13 @@ export const metadata: Metadata = {
     "copywriting",
     "content strategy",
     "freelance writer",
-    "Suhumeela portfolio",
+    "Sushmeela portfolio",
   ],
-  authors: [{ name: "Suhumeela" }],
+  authors: [{ name: "Sushmeela" }],
   openGraph: {
-    title: "Suhumeela - Expert Content Writer & Copywriter",
+    title: "Sushmeela - Expert Content Writer & Copywriter",
     description:
-      "Explore Suhumeela's portfolio of engaging blog posts, SEO content, and persuasive copywriting for businesses and brands.",
+      "Explore Sushmeela's portfolio of engaging blog posts, SEO content, and persuasive copywriting for businesses and brands.",
     type: "website",
     url: "https://storycup.vercel.app/", // Replace with your actual domain
     images: [
@@ -32,16 +35,16 @@ export const metadata: Metadata = {
         url: "contentwriterhomepage.jpeg", // Replace with a relevant image for social sharing
         width: 1200,
         height: 630,
-        alt: "Suhumeela Content Writing Portfolio",
+        alt: "Sushmeela Content Writing Portfolio",
       },
     ],
-    siteName: "Suhumeela Portfolio",
+    siteName: "Sushmeela Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Suhumeela - Expert Content Writer & Copywriter",
+    title: "Sushmeela - Expert Content Writer & Copywriter",
     description:
-      "Explore Suhumeela's portfolio of engaging blog posts, SEO content, and persuasive copywriting.",
+      "Explore Sushmeela's portfolio of engaging blog posts, SEO content, and persuasive copywriting.",
     images: ["/og-image.jpg"], // Replace with your actual image
   },
   alternates: {
@@ -62,15 +65,15 @@ export const metadata: Metadata = {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      name: "Suhumeela",
+      name: "Sushmeela",
       jobTitle: "Content Writer & SEO Copywriter",
       url: "https://storycup.vercel.app/", // Replace with your actual domain
       sameAs: [
-        "https://www.linkedin.com/in/suhumeela", // Replace with your LinkedIn
-        "https://twitter.com/suhumeela", // Replace with your Twitter
+        "https://www.linkedin.com/in/Sushmeela", // Replace with your LinkedIn
+        "https://twitter.com/Sushmeela", // Replace with your Twitter
       ],
       description:
-        "Suhumeela is a professional content writer specializing in SEO content, blog writing, and copywriting for businesses and brands.",
+        "Sushmeela is a professional content writer specializing in SEO content, blog writing, and copywriting for businesses and brands.",
     }),
   },
 };
@@ -84,9 +87,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
+        <ReviewSidebarProvider>
+          <ReviewSidebar />
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+            {children} 
+           <FloatingWhatsApp/>
+          </ThemeProvider>
+        </ReviewSidebarProvider>
       </body>
     </html>
   )

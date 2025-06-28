@@ -2,11 +2,13 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useState } from "react"
+import { Menu } from "lucide-react"
+
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { Menu } from "lucide-react"
-import { useState } from "react"
+import ReviewToggleButton from "@/components/ReviewToggleButton"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -25,11 +27,12 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">A</span>
             </div>
-            <span className="font-bold text-xl">Suhumeela Writer</span>
+            <span className="font-bold text-xl">Sushmeela Writer</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,10 +50,15 @@ export function Header() {
             ))}
           </nav>
 
+          {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
+            {/* Theme Toggle */}
             <ThemeToggle />
 
-            {/* Mobile Navigation */}
+            {/* ✅ Review Toggle Button */}
+            <ReviewToggleButton />
+
+            {/* Mobile Navigation Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="md:hidden">
                 <Button variant="ghost" size="icon">

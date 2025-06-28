@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail, Youtube } from "lucide-react"
 
 export function Footer() {
   return (
@@ -12,16 +12,16 @@ export function Footer() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">A</span>
               </div>
-              <span className="font-bold text-xl">Suhumaila</span>
+              <span className="font-bold text-xl">Sushmaila</span>
             </div>
             <p className="text-muted-foreground">Crafted with clarity by your dedicated Content Writer</p>
 
             <div className="flex space-x-2">
-              <Button size="icon" variant="ghost" asChild>
+              {/* <Button size="icon" variant="ghost" asChild>
                 <Link href="https://github.com" target="_blank">
                   <Github className="h-4 w-4" />
                 </Link>
-              </Button>
+              </Button> */}
               <Button size="icon" variant="ghost" asChild>
                 <Link href="https://linkedin.com" target="_blank">
                   <Linkedin className="h-4 w-4" />
@@ -29,11 +29,11 @@ export function Footer() {
               </Button>
               <Button size="icon" variant="ghost" asChild>
                 <Link href="https://twitter.com" target="_blank">
-                  <Twitter className="h-4 w-4" />
+                  <Youtube className="h-4 w-4" />
                 </Link>
               </Button>
               <Button size="icon" variant="ghost" asChild>
-                <Link href="mailto:alex@example.com">
+                <Link href="mailto:shustorycup@gmail.com">
                   <Mail className="h-4 w-4" />
                 </Link>
               </Button>
@@ -105,7 +105,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()}  Suhumaila. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()}  Sushmaila. All rights reserved.</p>
         </div>
       </div>
     </footer>

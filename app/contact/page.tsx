@@ -21,7 +21,7 @@ import {
   Phone,
   MapPin,
   Send,
-  Github,
+  Youtube,
   Linkedin,
   Twitter,
 } from "lucide-react";
@@ -262,7 +262,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Github className="h-4 w-4" />
+                      <Youtube className="h-4 w-4" />
                     </a>
                   </Button>
                   <Button size="icon" variant="outline" asChild>

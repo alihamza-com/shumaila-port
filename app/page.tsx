@@ -46,7 +46,7 @@ export default function HomePage() {
                   Available for freelance writing projects
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  Hi, I'm <span className="text-primary">Suhumeela</span>
+                  Hi, I'm <span className="text-primary">Sushmeela</span>
                 </h1>
                 <p className="text-xl lg:text-2xl text-muted-foreground">
                   Creative Content Writer & Copywriter
@@ -88,7 +88,7 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button size="icon" variant="ghost" asChild>
-                  <Link href="mailto:alex@example.com">
+                  <Link href="mailto:shustorycup@gmail.com">
                     <Mail className="h-5 w-5" />
                   </Link>
                 </Button>

@@ -9,11 +9,11 @@ import { Footer } from "@/components/footer"
 import { ExternalLink} from "lucide-react"
 import { Metadata } from "next"
 export const metadata: Metadata = {
-  title: "Suhumeela's Portfolio - SEO Content & Copywriting",
+  title: "Sushmeela's Portfolio - SEO Content & Copywriting",
   description:
-    "Explore Suhumeela's content writing portfolio, featuring SEO content, blog posts, and copywriting projects for businesses.",
+    "Explore Sushmeela's content writing portfolio, featuring SEO content, blog posts, and copywriting projects for businesses.",
   keywords: [
-  "Suhumeela portfolio",
+  "Sushmeela portfolio",
   "content writing portfolio",
   "best content writing services",
   "content writing services in Pakistan",
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
   "content writer rates per word",
   "content writer Karachi contact number",
 ],
-  authors: [{ name: "Suhumeela" }],
+  authors: [{ name: "Sushmeela" }],
   openGraph: {
-    title: "Suhumeela's Portfolio - Content Writing & SEO",
+    title: "Sushmeela's Portfolio - Content Writing & SEO",
     description:
-      "View Suhumeela's professional portfolio of SEO content, blog posts, and persuasive copywriting for brands and businesses.",
+      "View Sushmeela's professional portfolio of SEO content, blog posts, and persuasive copywriting for brands and businesses.",
     type: "website",
     url: "https://storycup.vercel.app/portfolio", // Replace with your actual Portfolio page URL
     images: [
@@ -46,16 +46,16 @@ export const metadata: Metadata = {
         url: "/worldwideartical.jpg", // Replace with a relevant image for the Portfolio page
         width: 1200,
         height: 630,
-        alt: "Suhumeela Content Writing Portfolio",
+        alt: "Sushmeela Content Writing Portfolio",
       },
     ],
-    siteName: "Suhumeela Portfolio",
+    siteName: "Sushmeela Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Suhumeela's Portfolio - Content Writing & SEO",
+    title: "Sushmeela's Portfolio - Content Writing & SEO",
     description:
-      "Discover Suhumeela's portfolio showcasing SEO content, blog writing, and copywriting projects.",
+      "Discover Sushmeela's portfolio showcasing SEO content, blog writing, and copywriting projects.",
     images: ["/worldwideartical.jpg"], // Replace with your actual image
   },
   alternates: {
@@ -76,18 +76,18 @@ export const metadata: Metadata = {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "CreativeWork",
-      name: "Suhumeela's Content Writing Portfolio",
+      name: "Sushmeela's Content Writing Portfolio",
       author: {
         "@type": "Person",
-        name: "Suhumeela",
+        name: "Sushmeela",
       },
       url: "https://storycup.vercel.app/portfolio", // Replace with your actual Portfolio page URL
       sameAs: [
-        "https://www.linkedin.com/in/suhumeela", // Replace with your actual LinkedIn
-        "https://twitter.com/suhumeela", // Replace with your actual Twitter
+        "https://www.linkedin.com/in/Sushmeela", // Replace with your actual LinkedIn
+        "https://twitter.com/Sushmeela", // Replace with your actual Twitter
       ],
       description:
-        "Suhumeela's portfolio showcases professional content writing, including SEO content, blog posts, and copywriting for businesses and brands.",
+        "Sushmeela's portfolio showcases professional content writing, including SEO content, blog posts, and copywriting for businesses and brands.",
     }),
   },
 };

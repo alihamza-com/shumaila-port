@@ -7,9 +7,9 @@ import { Footer } from "@/components/footer"
 import { CheckCircle, FileText, PenLine, Search, Newspaper, MessageCircle } from "lucide-react"
 import { Metadata } from "next"
 export const metadata: Metadata = {
-  title: "Suhumeela's Services - Best Content Writing & SEO Copywriting",
+  title: "Sushmeela's Services - Best Content Writing & SEO Copywriting",
   description:
-    "Hire Suhumeela for top content writing services in Pakistan, including SEO content, blog writing, and copywriting to elevate your brand.",
+    "Hire Sushmeela for top content writing services in Pakistan, including SEO content, blog writing, and copywriting to elevate your brand.",
   keywords: [
     "best content writing services",
     "content writing services in Pakistan",
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     "professional content writing services",
     "content writer Karachi",
   ],
-  authors: [{ name: "Suhumeela" }],
+  authors: [{ name: "Sushmeela" }],
   openGraph: {
-    title: "Suhumeela's Services - Best Content Writing & SEO in Pakistan",
+    title: "Sushmeela's Services - Best Content Writing & SEO in Pakistan",
     description:
-      "Suhumeela offers expert content writing services in Pakistan, including SEO content, blog writing, and copywriting for businesses worldwide.",
+      "Sushmeela offers expert content writing services in Pakistan, including SEO content, blog writing, and copywriting for businesses worldwide.",
     type: "website",
     url: "https://storycup.vercel.app/services", // Replace with your actual Services page URL
     images: [
@@ -34,16 +34,16 @@ export const metadata: Metadata = {
         url: "/services-og-image.jpg", // Replace with a relevant image for the Services page
         width: 1200,
         height: 630,
-        alt: "Suhumeela Best Content Writing Services",
+        alt: "Sushmeela Best Content Writing Services",
       },
     ],
-    siteName: "Suhumeela Portfolio",
+    siteName: "Sushmeela Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Suhumeela's Services - Best Content Writing & SEO",
+    title: "Sushmeela's Services - Best Content Writing & SEO",
     description:
-      "Hire Suhumeela for professional content writing, SEO content, and blog writing services in Pakistan and beyond.",
+      "Hire Sushmeela for professional content writing, SEO content, and blog writing services in Pakistan and beyond.",
     images: ["/services-og-image.jpg"], // Replace with your actual image
   },
   alternates: {
@@ -67,15 +67,15 @@ export const metadata: Metadata = {
       serviceType: "Content Writing",
       provider: {
         "@type": "Person",
-        name: "Suhumeela",
+        name: "Sushmeela",
       },
       url: "https://storycup.vercel.app/services", // Replace with your actual Services page URL
       sameAs: [
-        "https://www.linkedin.com/in/suhumeela", // Replace with your actual LinkedIn
-        "https://twitter.com/suhumeela", // Replace with your actual Twitter
+        "https://www.linkedin.com/in/Sushmeela", // Replace with your actual LinkedIn
+        "https://twitter.com/Sushmeela", // Replace with your actual Twitter
       ],
       description:
-        "Suhumeela provides top content writing services in Pakistan, specializing in SEO content, blog writing, article writing, and copywriting for businesses globally.",
+        "Sushmeela provides top content writing services in Pakistan, specializing in SEO content, blog writing, article writing, and copywriting for businesses globally.",
       areaServed: [
         "Pakistan",
         "Karachi",
@@ -127,7 +127,7 @@ const services = [
 const packages = [
   {
     name: "Starter",
-    price: "$500",
+    price: "$100",
     description: "Perfect for startups and personal brands",
     features: [
       "3 blog posts (up to 1,000 words)",
@@ -137,10 +137,12 @@ const packages = [
       "Email support",
     ],
     popular: false,
+      discount: "25% OFF",
+
   },
   {
     name: "Professional",
-    price: "$1,200",
+    price: "$200",
     description: "Ideal for growing businesses and agencies",
     features: [
       "6 blog posts (up to 1,200 words)",
@@ -150,6 +152,7 @@ const packages = [
       "Priority support",
     ],
     popular: true,
+    discount: "30% OFF",
   },
   {
     name: "Enterprise",
@@ -163,6 +166,7 @@ const packages = [
       "Dedicated account support",
     ],
     popular: false,
+    discount: "0% OFF",
   },
 ]
 
@@ -217,40 +221,52 @@ export default function ServicesPage() {
         </section>
 
         {/* Pricing Packages */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Pricing Packages</h2>
-            <p className="text-lg text-muted-foreground">Flexible content solutions for every stage of growth</p>
-          </div>
+<section className="mb-20">
+  <div className="text-center mb-12">
+    <h2 className="text-3xl font-bold mb-4">Pricing Packages</h2>
+    <p className="text-lg text-muted-foreground">Flexible content solutions for every stage of growth</p>
+  </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <Card key={index} className={`relative ${pkg.popular ? "border-primary shadow-lg" : ""}`}>
-                {pkg.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2">Most Popular</Badge>
-                )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">{pkg.name}</CardTitle>
-                  <div className="text-3xl font-bold text-primary">{pkg.price}</div>
-                  <p className="text-muted-foreground">{pkg.description}</p>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
-                    {pkg.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full" variant={pkg.popular ? "default" : "outline"} asChild>
-                    <Link href="/contact">Get Started</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+  <div className="grid md:grid-cols-3 gap-8">
+    {packages.map((pkg, index) => (
+      <Card key={index} className={`relative ${pkg.popular ? "border-primary shadow-lg" : ""}`}>
+        {/* Popular Badge */}
+        {pkg.popular && (
+          <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+            Most Popular
+          </Badge>
+        )}
+
+        {/* Discount Badge */}
+        {pkg.discount && (
+          <div className="absolute top-3 right-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded z-10 shadow">
+            {pkg.discount}
           </div>
-        </section>
+        )}
+
+        <CardHeader className="text-center">
+          <CardTitle className="text-2xl">{pkg.name}</CardTitle>
+          <div className="text-3xl font-bold text-primary">{pkg.price}</div>
+          <p className="text-muted-foreground">{pkg.description}</p>
+        </CardHeader>
+        <CardContent>
+          <ul className="space-y-3 mb-6">
+            {pkg.features.map((feature, featureIndex) => (
+              <li key={featureIndex} className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
+                <span className="text-sm">{feature}</span>
+              </li>
+            ))}
+          </ul>
+          <Button className="w-full" variant={pkg.popular ? "default" : "outline"} asChild>
+            <Link href="/contact">Get Started</Link>
+          </Button>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</section>
+
 
         {/* Process */}
         <section className="mb-20">

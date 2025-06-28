@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Contact Suhumeela - Best Content Writer in Pakistan",
+  title: "Contact Sushmeela - Best Content Writer in Pakistan",
   description:
-    "Contact Suhumeela for top content writing services in Pakistan, SEO content, and copywriting via WhatsApp or email.",
+    "Contact Sushmeela for top content writing services in Pakistan, SEO content, and copywriting via WhatsApp or email.",
   keywords: [
     "content writer Karachi contact number",
     "content writer Karachi contact number WhatsApp",
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     "content writer rates per word",
     "freelance content writer near me",
   ],
-  authors: [{ name: "Suhumeela" }],
+  authors: [{ name: "Sushmeela" }],
   openGraph: {
-    title: "Contact Suhumeela - Best Content Writer in Pakistan",
+    title: "Contact Sushmeela - Best Content Writer in Pakistan",
     description:
-      "Reach Suhumeela for expert content writing services, SEO content, and copywriting in Pakistan via WhatsApp or email.",
+      "Reach Sushmeela for expert content writing services, SEO content, and copywriting in Pakistan via WhatsApp or email.",
     type: "website",
     url: "https://yourwebsite.com/contact",
     images: [
@@ -38,16 +38,16 @@ export const metadata: Metadata = {
         url: "/contact-og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Contact Suhumeela for Content Writing Services",
+        alt: "Contact Sushmeela for Content Writing Services",
       },
     ],
-    siteName: "Suhumeela Portfolio",
+    siteName: "Sushmeela Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Suhumeela - Content Writing Services",
+    title: "Contact Sushmeela - Content Writing Services",
     description:
-      "Get in touch with Suhumeela for SEO content, blog writing, and copywriting services in Pakistan, USA, and Dubai.",
+      "Get in touch with Sushmeela for SEO content, blog writing, and copywriting services in Pakistan, USA, and Dubai.",
     images: ["/contact-og-image.jpg"],
   },
   alternates: {
@@ -68,12 +68,12 @@ export const metadata: Metadata = {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      name: "Suhumeela",
+      name: "Sushmeela",
       jobTitle: "Content Writer & SEO Copywriter",
       url: "https://yourwebsite.com/contact",
       sameAs: [
-        "https://www.linkedin.com/in/suhumeela",
-        "https://twitter.com/suhumeela",
+        "https://www.linkedin.com/in/Sushmeela",
+        "https://twitter.com/Sushmeela",
         "https://wa.me/yourwhatsappnumber",
       ],
       contactPoint: [
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
         },
       ],
       description:
-        "Contact Suhumeela, a top content writer in Pakistan, for professional content writing services, including SEO content, blog writing, and copywriting, via WhatsApp or email.",
+        "Contact Sushmeela, a top content writer in Pakistan, for professional content writing services, including SEO content, blog writing, and copywriting, via WhatsApp or email.",
     }),
   },
 }

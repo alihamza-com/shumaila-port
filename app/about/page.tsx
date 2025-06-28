@@ -11,11 +11,11 @@ import type { Metadata } from "next";
 import { DownloadResumeButton } from "@/components/DownloadResumeButton"
 
 export const metadata: Metadata = {
-  title: "About Suhumeela - Expert Content Writer & SEO Copywriter",
+  title: "About Sushmeela - Expert Content Writer & SEO Copywriter",
   description:
-    "Learn about Suhumeela, a skilled content writer specializing in SEO content, blog writing, and copywriting for brands and businesses.",
+    "Learn about Sushmeela, a skilled content writer specializing in SEO content, blog writing, and copywriting for brands and businesses.",
   keywords: [
-  "Suhumeela",
+  "Sushmeela",
   "content writer",
   "best content writing services",
   "content writing services in Pakistan",
@@ -36,11 +36,11 @@ export const metadata: Metadata = {
   "content writer rates per word",
   "content writer Karachi contact number",
 ],
-  authors: [{ name: "Suhumeela" }],
+  authors: [{ name: "Sushmeela" }],
   openGraph: {
-    title: "About Suhumeela - Expert Content Writer",
+    title: "About Sushmeela - Expert Content Writer",
     description:
-      "Discover Suhumeela's journey as a content writer, specializing in SEO, blog writing, and persuasive copy for businesses.",
+      "Discover Sushmeela's journey as a content writer, specializing in SEO, blog writing, and persuasive copy for businesses.",
     type: "website",
     url: "https://storycup.vercel.app/about", // Replace with your actual About page URL
     images: [
@@ -48,16 +48,16 @@ export const metadata: Metadata = {
         url: "/aboutme.webp", // Replace with a relevant image for the About page
         width: 1200,
         height: 630,
-        alt: "Suhumeela - Content Writer Profile",
+        alt: "Sushmeela - Content Writer Profile",
       },
     ],
-    siteName: "Suhumeela Portfolio",
+    siteName: "Sushmeela Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Suhumeela - Expert Content Writer",
+    title: "About Sushmeela - Expert Content Writer",
     description:
-      "Learn about Suhumeela's expertise in SEO content, blog writing, and copywriting for impactful business content.",
+      "Learn about Sushmeela's expertise in SEO content, blog writing, and copywriting for impactful business content.",
     images: ["/aboutme.webp"], // Replace with your actual image
   },
   alternates: {
@@ -78,15 +78,15 @@ export const metadata: Metadata = {
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      name: "Suhumeela",
+      name: "Sushmeela",
       jobTitle: "Content Writer & SEO Copywriter",
       url: "https://storycup.vercel.app/about", // Replace with your actual About page URL
       sameAs: [
-        "https://www.linkedin.com/in/suhumeela", // Replace with your actual LinkedIn
-        "https://twitter.com/suhumeela", // Replace with your actual Twitter
+        "https://www.linkedin.com/in/Sushmeela", // Replace with your actual LinkedIn
+        "https://twitter.com/Sushmeela", // Replace with your actual Twitter
       ],
       description:
-        "Suhumeela is a professional content writer with expertise in SEO content, blog writing, and copywriting, delivering engaging content for businesses and brands.",
+        "Sushmeela is a professional content writer with expertise in SEO content, blog writing, and copywriting, delivering engaging content for businesses and brands.",
     }),
   },
 };

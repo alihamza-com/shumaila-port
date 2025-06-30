@@ -6,7 +6,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import ReviewSidebar from "@/components/reViews"
 import { ReviewSidebarProvider } from "@/components/ReviewSidebarContext"
-import ReviewToggleButton from "@/components/ReviewToggleButton"
+
 import FloatingWhatsApp from "@/components/floating-whatsapp"
 const inter = Inter({ subsets: ["latin"] })
 
@@ -24,6 +24,20 @@ export const metadata: Metadata = {
     "Sushmeela portfolio",
     "storycup"
   ],
+  icons: {
+    icon: "/favicon.ico", // Replace with your actual favicon
+    apple: "/apple-touch-icon.png", // Replace with your actual Apple touch icon
+    other: [
+      {
+        rel: "icon",
+        url: "/favicon.ico", // Replace with your actual 32x32 icon
+      },
+      {
+        rel: "icon",
+        url: "/favicon.ico", // Replace with your actual 16x16 icon
+      },
+    ],
+  },
   authors: [{ name: "Sushmeela" }],
   openGraph: {
     title: "Sushmeela - Expert Content Writer & Copywriter",
@@ -33,7 +47,7 @@ export const metadata: Metadata = {
     url: "https://storycup.vercel.app/", // Replace with your actual domain
     images: [
       {
-        url: "contentwriterhomepage.jpeg", // Replace with a relevant image for social sharing
+        url: "/logo.jpeg", // Replace with a relevant image for social sharing
         width: 1200,
         height: 630,
         alt: "Sushmeela Content Writing Portfolio",
@@ -87,6 +101,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      
       <body className={inter.className}>
         <ReviewSidebarProvider>
           <ReviewSidebar />

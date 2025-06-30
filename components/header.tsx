@@ -29,10 +29,8 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">A</span>
-            </div>
-            <span className="font-bold text-xl">Sushmeela Writer</span>
+          <img src="/logo.jpeg" alt="Sushmeela Logo" className="h-12 w-12 rounded-full" />
+            <span className="font-bold text-xl">Sushmeela </span>
           </Link>
 
           {/* Desktop Navigation */}

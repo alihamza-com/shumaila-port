@@ -46,7 +46,7 @@ export default function HomePage() {
                   Available for freelance writing projects
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                  Hi, I'm <span className="text-primary">Sushmeela</span>
+                  Hi, I'm <span className="text-primary">Sushmeela Sagar</span>
                 </h1>
                 <p className="text-xl lg:text-2xl text-muted-foreground">
                   Creative Content Writer & Copywriter
